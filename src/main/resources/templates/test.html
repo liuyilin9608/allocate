@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello World!</title>
+</head>
+<body>
+<h1 th:inline="text">我是爸爸</h1>
+<table>
+    <tr>
+        <th>id</th>
+        <th>tel</th>
+        <th>wechat</th>
+        <th>taobao</th>
+        <th>nickname</th>
+        <th>examdate</th>
+    </tr>
+    <tr th:each="user : ${test}">
+        <td th:text="${user.getId()}"></td>
+        <td th:text="${user.getTel()}"></td>
+        <td th:text="${user.getWechat()}"></td>
+        <td th:text="${user.getTaobao()}"></td>
+        <td th:text="${user.getNickname()}"></td>
+        <td th:text="${user.getExamdate()}"></td>
+    </tr>
+</table>
+</body>
